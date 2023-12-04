@@ -31,11 +31,9 @@ function recalculate() {
     let cost;
     if (modelName === 'XYZ') {
         cost = Number(duration)*100;
-        console.log(cost)
     }
     else if (modelName === 'CPRG') {
         cost = Number(duration)*213;
-        console.log(cost)
     }
     costLabel.innerHTML = cost;
 }
@@ -61,12 +59,10 @@ function changeModel() {
     if (modelName === 'XYZ') {
         modelName = 'CPRG';
         modelText.innerHTML = 'Model CPRG';
-        console.log('change to CPRG');
     } 
     else if (modelName === 'CPRG') {
         modelName = 'XYZ';
         modelText.innerHTML = 'Model XYZ';
-        console.log('change to XYZ')
     }
     recalculate();
 }
