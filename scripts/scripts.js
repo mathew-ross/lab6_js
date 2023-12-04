@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function(event) {
+document.addEventListener('DOMContentLoaded', function() {
 /****************** YOUR NAME: Mathew Ross
 
 The instructions describe the missing logic that is needed; you will translate these into JavaScript in the places indicated.
@@ -54,8 +54,7 @@ function recalculate() {
 const modelButton = document.getElementById('model-button');
 
 function changeModel() {
-    modelText = document.getElementById('model-text')
-    console.log(modelName)
+    let modelText = document.getElementById('model-text');
     if (modelName === 'XYZ') {
         modelName = 'CPRG';
         modelText.innerHTML = 'Model CPRG';
@@ -83,12 +82,12 @@ modelButton.addEventListener('click', changeModel);
 let durationButton = document.getElementById('duration-button');
 
 function changeDuration() {
-    durationText = document.getElementById('duration-text');
-    duration = Number(prompt('What is the new duration? '))
-    durationText.innerHTML = duration
-    recalculate()
+    let durationText = document.getElementById('duration-text');
+    duration = Number(prompt('What is the new duration? '));
+    durationText.innerHTML = duration;
+    recalculate();
 }
 
 durationButton.addEventListener("click", changeDuration);
 
-})
+});
